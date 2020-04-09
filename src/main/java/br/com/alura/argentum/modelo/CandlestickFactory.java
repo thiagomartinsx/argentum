@@ -6,11 +6,11 @@ import java.util.List;
 public class CandlestickFactory {
 
 	public Candlestick constroiCandleParaData(List<Negociacao> negociacoes, LocalDateTime data) {
-		double abertura = negociacoes.get(0).getPreco();
-		double fechamento = negociacoes.get(negociacoes.size() - 1).getPreco();
+		double abertura = negociacoes.isEmpty() ? 0 : negociacoes.get(0).getPreco();
+		double fechamento = negociacoes.isEmpty() ? 0 : negociacoes.get(negociacoes.size() - 1).getPreco();
 
-		double minimo = negociacoes.get(0).getPreco();
-		double maxima = negociacoes.get(0).getPreco();
+		double minimo = negociacoes.isEmpty() ? 0 : negociacoes.get(0).getPreco();
+		double maxima = negociacoes.isEmpty() ? 0 : negociacoes.get(0).getPreco();
 
 		double volume = 0;
 		for (Negociacao negociacao : negociacoes) {

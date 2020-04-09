@@ -6,16 +6,16 @@ public final class Candlestick {
 
 	private final double abertura;
 	private final double fechamento;
-	private final double maxima;
+	private final double maximo;
 	private final double minimo;
 	private final double volume;
 	private final LocalDateTime data;
 
-	public Candlestick(double abertura, double fechamento, double maxima, double minimo, double volume,
+	public Candlestick(double abertura, double fechamento, double maximo, double minimo, double volume,
 			LocalDateTime data) {
 		this.abertura = abertura;
 		this.fechamento = fechamento;
-		this.maxima = maxima;
+		this.maximo = maximo;
 		this.minimo = minimo;
 		this.volume = volume;
 		this.data = data;
@@ -29,8 +29,8 @@ public final class Candlestick {
 		return fechamento;
 	}
 
-	public double getMaxima() {
-		return maxima;
+	public double getMaximo() {
+		return maximo;
 	}
 
 	public double getMinimo() {

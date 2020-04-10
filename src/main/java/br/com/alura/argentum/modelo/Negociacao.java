@@ -1,5 +1,6 @@
 package br.com.alura.argentum.modelo;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public final class Negociacao {
@@ -39,6 +40,13 @@ public final class Negociacao {
 
 	public double getVolume() {
 		return this.quantidade * this.preco;
+	}
+
+	public boolean isMesmoDia(LocalDateTime dateTime) {
+		LocalDate outraData = LocalDate.from(dateTime);
+		LocalDate data = LocalDate.from(this.data);
+
+		return data.equals(outraData);
 	}
 
 	@Override

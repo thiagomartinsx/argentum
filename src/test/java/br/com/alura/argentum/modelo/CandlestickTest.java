@@ -9,14 +9,14 @@ public class CandlestickTest {
 
 	@Test(expected = IllegalArgumentException.class)
 	public void maximoNaoDeveSerMenorQueMinimo() {
-		CandleBuilder builder = new CandleBuilder();
+		CandlestickBuilder builder = new CandlestickBuilder();
 		Candlestick candle = builder.comAbertura(20.0).comFechamento(30.0).comMaximo(15.0).comMinimo(50.0)
 				.comVolume(300).comData(LocalDateTime.now()).geraCandle();
 	}
 
 	@Test
 	public void ehAltaSeFechamentoForIgualAbertura() {
-		CandleBuilder builder = new CandleBuilder();
+		CandlestickBuilder builder = new CandlestickBuilder();
 		Candlestick candle = builder.comAbertura(30.0).comFechamento(30.0).comMaximo(35.0).comMinimo(15.0)
 				.comVolume(300).comData(LocalDateTime.now()).geraCandle();
 

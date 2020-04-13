@@ -1,10 +1,13 @@
 package br.com.alura.argentum.modelo;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-public final class Negociacao {
+public final class Negociacao implements Serializable{
 
+	private static final long serialVersionUID = 1L;
+	
 	private final double preco;
 	private final int quantidade;
 	private final LocalDateTime data;

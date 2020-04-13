@@ -19,13 +19,13 @@ public class MediaMovelSimples implements Indicador {
 		double soma = 0;
 
 		for (int i = posicao; i > posicao - 3; i--) {
-			soma += serie.getCandle(i).getFechamento();
+			soma += outroIndicador.calcula(i, serie);
 		}
 		return soma / 3;
 	}
 
 	@Override
 	public String toString() {
-		return "MMS - Fechamento";
+		return "MMS - " + outroIndicador.toString();
 	}
 }
